@@ -1,264 +1,162 @@
 # EMPLOYEE_ATTRITON
 
 
-<div align="center">
-📊 HR Employee Attrition Analysis
-End-to-End Data Science & Machine Learning Project
-
-🚀 Predicting Employee Attrition using Data-Driven Insights & Machine Learning
-
-</div>
-🧭 Table of Contents
-
+🚀 Employee Attrition Prediction
+End-to-End Machine Learning Project using Artificial Neural Networks (ANN)
 📌 Project Overview
 
-❓ Problem Statement
+Employee attrition (employees leaving an organization) is a critical business problem that directly impacts productivity, hiring costs, and organizational stability.
+
+This project builds an end-to-end Machine Learning system to predict employee attrition using an Artificial Neural Network (ANN).
+By analyzing employee demographic, professional, and behavioral data, the model helps HR teams identify high-risk employees early and take data-driven retention actions.
 
 🎯 Project Objectives
 
-📂 Dataset Information
+Understand key factors influencing employee attrition
 
-🔍 Data Understanding & EDA
+Perform Exploratory Data Analysis (EDA)
 
-📊 Visualization
+Apply data preprocessing and feature engineering
 
-⚙️ Data Preprocessing
+Build and train an Artificial Neural Network (ANN)
 
-🤖 Machine Learning Models
+Evaluate model performance using standard metrics
 
-📈 Model Evaluation
+Predict attrition for new/unseen employee data
 
-🧠 Key Insights
+🧠 Why Employee Attrition Prediction Matters
 
-💼 Business Recommendations
+High attrition increases recruitment and training costs
 
-🚀 Tools & Technologies
+Loss of skilled employees reduces team efficiency
 
-📦 Project Deliverables
+Early prediction enables preventive HR strategies
 
-🔮 Future Enhancements
+Data-driven decisions outperform intuition-based decisions
 
-👤 Author
+📊 Dataset Information
 
-📌 Project Overview
+Source: Kaggle (publicly available HR analytics dataset)
 
-Employee attrition is a major challenge for organizations, leading to increased recruitment costs, loss of skilled employees, and reduced productivity.
+Type: Structured tabular dataset
 
-This project presents a complete end-to-end data science workflow to:
+Domain: Human Resource Analytics
 
-Understand employee behavior
+This dataset contains employee demographic details, job roles, compensation, work behavior, and satisfaction-related attributes used to predict employee attrition.
 
-Identify factors contributing to attrition
+📌 The dataset used in this project was sourced from Kaggle for educational and learning purposes.
 
-Predict whether an employee is likely to leave
+📊 Dataset Description
+Key Columns Explanation
+Feature	Description
+Age	Age of the employee
+Department	Department where employee works
+JobRole	Employee’s role in the company
+MonthlyIncome	Monthly salary
+JobSatisfaction	Satisfaction level (1–4)
+YearsAtCompany	Total years in the company
+OverTime	Whether employee works overtime (Yes/No)
+WorkLifeBalance	Work-life balance rating
+PerformanceRating	Employee performance score
+Attrition	Target variable (Yes / No)
 
-The analysis combines data understanding, exploratory data analysis (EDA), visualization, preprocessing, and multiple machine learning models to generate actionable HR insights.
+🎯 Target Variable: Attrition
 
-❓ Problem Statement
+🔄 Project Workflow (End-to-End)
 
-Organizations often lack:
+Data Loading
 
-Early identification of employees at risk of leaving
+Exploratory Data Analysis (EDA)
 
-Clear understanding of factors driving attrition
+Data Preprocessing
 
-Predictive tools for proactive retention
+Train-Test Split
 
-🔍 Goal:
+ANN Model Building
 
-To build a machine learning–based predictive system that can:
+Model Training
 
-Analyze employee data
+Model Evaluation
 
-Predict attrition probability
+Prediction
 
-Support data-driven HR decision-making
+🧠 Machine Learning Model
+Artificial Neural Network (ANN)
 
-🎯 Project Objectives
+Why ANN?
 
-Perform in-depth analysis of HR employee data
+Captures complex non-linear relationships
 
-Explore patterns and trends affecting attrition
+Works well with structured HR datasets
 
-Visualize key insights using charts and plots
+High predictive power for binary classification
 
-Apply proper data preprocessing techniques
+model.compile(
+    optimizer=Adam(learning_rate=0.001),
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
 
-Train and compare multiple ML models
+📈 Model Evaluation Metrics
 
-Deliver business-oriented insights and recommendations
+Accuracy
 
-📂 Dataset Information
+Precision
 
-Dataset: HR Employee Attrition Dataset
+Recall
 
-Target Variable: Attrition (Yes / No)
+F1-Score
 
-Feature Types:
+ROC-AUC Curve
 
-👤 Demographics (Age, Gender, Education)
+🔮 Sample Prediction
+sample = X.iloc[[0]]
+sample_processed = preprocessor.transform(sample)
 
-💼 Job Details (Department, JobRole, YearsAtCompany)
+prediction = model.predict(sample_processed)
 
-💰 Compensation (MonthlyIncome)
+print("Attrition Risk:", "Yes" if prediction > 0.5 else "No")
 
-⚖️ Work-Life Balance & Satisfaction
+📌 Key Insights
 
-⏱️ Overtime & Performance Indicators
+Overtime significantly increases attrition risk
 
-🔍 Data Understanding & EDA
+Job satisfaction strongly impacts employee retention
 
-The exploratory data analysis includes:
+Salary and experience play a major role in attrition decisions
 
-Dataset structure and summary statistics
+ANN effectively captures complex employee behavior patterns
 
-Target variable distribution (class imbalance)
+✅ Conclusion
 
-Univariate analysis of numerical features
+The ANN model predicts employee attrition with strong performance
 
-Categorical feature distribution
+The system supports proactive HR decision-making
 
-Attrition vs feature relationship analysis
+Helps organizations reduce attrition using predictive analytics
 
-📌 Key Observations:
+Demonstrates a complete end-to-end ML pipeline
 
-Attrition is higher among younger employees
-
-Employees working overtime show significantly higher attrition
-
-Lower income groups are more prone to leave
-
-Job satisfaction strongly impacts retention
-
-📊 Visualization
-
-Visualizations were created using Matplotlib and Seaborn, including:
-
-Bar charts & count plots
-
-Box plots for salary and experience
-
-Attrition comparison plots
-
-Correlation heatmap
-
-These plots helped uncover hidden trends and relationships in the data.
-
-⚙️ Data Preprocessing
-
-Checked for missing values and duplicates
-
-Converted target variable into numerical format
-
-Separated features into:
-
-Numerical → StandardScaler
-
-Categorical → OneHotEncoder
-
-Used Pipeline and ColumnTransformer to ensure:
-
-Clean workflow
-
-No data leakage
-
-Reproducibility
-
-🤖 Machine Learning Models
-
-The following models were implemented and compared:
-
-📌 Logistic Regression (Baseline & interpretable)
-
-📌 Naive Bayes
-
-📌 K-Nearest Neighbors (KNN)
-
-📌 Random Forest Classifier
-
-📌 Artificial Neural Network (ANN)
-
-📈 Model Evaluation
-
-Models were evaluated using:
-
-Accuracy Score
-
-Confusion Matrix
-
-Precision, Recall & F1-Score
-
-ROC Curve & AUC
-
-🏆 Best Performing Models:
-
-Random Forest
-
-Artificial Neural Network
-
-🧠 Key Insights
-
-Overtime is the strongest indicator of attrition
-
-Monthly income significantly influences employee retention
-
-Employees with low job satisfaction are more likely to leave
-
-Early-career employees show higher attrition risk
-
-💼 Business Recommendations
-
-Reduce excessive overtime policies
-
-Improve compensation for lower-income employees
-
-Focus retention strategies on new joiners
-
-Enhance job satisfaction and work-life balance initiatives
-
-🚀 Tools & Technologies
+🛠️ Tech Stack
 
 Python
 
-NumPy
+Pandas, NumPy
 
-Pandas
-
-Matplotlib
-
-Seaborn
+Matplotlib, Seaborn
 
 Scikit-learn
 
 TensorFlow / Keras
 
-Jupyter Notebook
+🙏 Acknowledgement
 
-📦 Project Deliverables
-
-📘 Detailed Jupyter Notebook (1.5–2 MB analysis)
-
-📊 Professional PowerPoint Presentation (20 slides)
-
-🧾 Well-documented GitHub repository
-
-🔮 Future Enhancements
-
-Handle class imbalance using SMOTE
-
-Hyperparameter tuning for better performance
-
-Deploy model using Streamlit or Flask
-
-Integrate real-time HR data
+I would like to express my sincere gratitude to my guardian and mentor, Mr. Siddarth Sir,
+whose guidance, support, and mentorship played a crucial role in helping me understand
+machine learning concepts and successfully complete this project.
 
 👤 Author
 
 Chirag Jangid
-Aspiring Data Scientist | Machine Learning Enthusiast
-
-<div align="center">
-
-⭐ If you found this project useful, give it a star on GitHub! ⭐
-
-</div>
+Machine Learning Enthusiast | Data Analytics
+🚀 Passionate about solving real-world business problems using ML
