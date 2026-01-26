@@ -142,13 +142,13 @@ print("Attrition Risk:", "Yes" if prediction > 0.5 else "No")
 ---
 # 🙏 Acknowledgement
 
-**I would like to express my sincere gratitude to my guardian and mentor, Mr. Siddarth Sir,
+*I would like to express my sincere gratitude to my guardian and mentor, Mr. Siddarth Sir,
 whose guidance, continuous support, and mentorship played a crucial role in helping me
-understand machine learning concepts and successfully complete this project.**
+understand machine learning concepts and successfully complete this project.*
 
-**I have learned the core concepts, practical implementation, and end-to-end project development
+*I have learned the core concepts, practical implementation, and end-to-end project development
 from Future Vision Institution, Surat, Gujarat, which provided me with strong foundational
-knowledge and hands-on learning experience in Machine Learning and Data Analytics.**
+knowledge and hands-on learning experience in Machine Learning and Data Analytics.*
 ---
 # 👤 Author
 
