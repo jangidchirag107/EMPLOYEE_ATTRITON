@@ -8,10 +8,14 @@
 # 📌 Project Overview
 ---
 Employee attrition (employees leaving an organization) is a critical business problem that directly impacts productivity, hiring costs, and organizational stability.
+
 ---
+
 This project builds an end-to-end Machine Learning system to predict employee attrition using an Artificial Neural Network (ANN)
 By analyzing employee demographic, professional, and behavioral data, the model helps HR teams identify high-risk employees early and take data-driven retention actions.
+
 ---
+
 # 🎯 Project Objectives
 
 > *Understand key factors influencing employee attrition*
