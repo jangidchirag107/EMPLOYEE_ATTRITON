@@ -1,10 +1,15 @@
 # EMPLOYEE_ATTRITON
 
 ---
+
 # 🚀 Employee Attrition Prediction
+
 ---
+
 *End-to-End Machine Learning Project using Artificial Neural Networks (ANN)*
+
 ---
+
 # 📌 Project Overview
 ---
 Employee attrition (employees leaving an organization) is a critical business problem that directly impacts productivity, hiring costs, and organizational stability.
